@@ -1,0 +1,24 @@
+{% extends 'my_app/layoute.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Главная</title>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Добро пожаловать на Просто Сайт!</h1>
+    <br>
+    <div style="float: left; margin: 0 15px 15px 0;">
+        <img src="{% static 'my_app/img/smile.png' %}" alt="Logo" style="width: 250px; height: auto;">
+    </div>
+    <br>
+    <br>
+    <br>
+    <p class="lead">Мы рады видеть вас на нашей главной странице. Здесь вы найдете самую актуальную информацию о нас и наших услугах.</p>
+    <br>
+    <br>
+    <p>Узнайте больше о нашей компании и команде, посетив раздел "О Нас".</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'my_app:about' %}" role="button">Узнать больше</a>
+</div>
+{% endblock %}

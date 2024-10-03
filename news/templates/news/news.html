@@ -1,0 +1,20 @@
+{% extends 'my_app/layoute.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Новостная страница</title>
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>Новостная страница</h1>
+
+    {% for post in news %}
+        <div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.short_description }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
