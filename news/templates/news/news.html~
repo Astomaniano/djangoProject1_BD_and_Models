@@ -18,7 +18,7 @@
             <h2>{{ post.title }}</h2>
             <h3>{{ post.short_description }}</h3>
             <p>{{ post.text }}</p>
-            <small>Автор: {{ post.author.first_name }} {{ post.author.last_name }}</small><br>
+            <small>Автор: {{ post.author.first_name }} {{ post.author.last_name }}</small>
             <small>Дата публикации: {{ post.pub_date }}</small>
         <hr>
         </div>
