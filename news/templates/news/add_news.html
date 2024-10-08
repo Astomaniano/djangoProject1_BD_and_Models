@@ -1,0 +1,35 @@
+{% extends 'my_app/layoute.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Страница для добавления новостей</title>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div>
+    <h2>Форма для добавления новостей</h2>
+    <div class="container mt-4">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.title }}
+            </div>
+            <div class="form-group">
+                {{ form.short_description }}
+            </div>
+            <div class="form-group">
+                {{ form.text }}
+            </div>
+            <div class="form-group">
+                {{ form.pub_date }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Добавить Новость</button>
+        </form>
+        <p>{{ error }}</p>
+    </div>
+</div>
+{% endblock %}

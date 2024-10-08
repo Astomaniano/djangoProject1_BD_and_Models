@@ -15,14 +15,18 @@
 
     {% if news %}
         {% for post in news %}
-            <div>
-                <h2>{{ post.title }}</h2>
-                <h3>{{ post.short_description }}</h3>
-                <p>{{ post.text }}</p>
-                <small>Автор: {{ post.author.first_name }} {{ post.author.last_name }}</small><br>
-                <small>Дата публикации: {{ post.pub_date }}</small>
-            <hr>
-            </div>
+
+                <div class="card" style="width: 30rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.short_description }}</p>
+                        <a href="#" class="btn btn-primary">Подробнее</a>
+                        <small>Автор: {{ post.author.first_name }} {{ post.author.last_name }}</small><br>
+                        <small>Дата публикации: {{ post.pub_date }}</small>
+
+                    </div>
+                </div>
+
         {% endfor %}
 
     {% else %}
