@@ -19,7 +19,7 @@ def create_news(request):
             news_post.author = request.user
             # Сохранение экземпляра в базу данных
             news_post.save()
-            return redirect('news_home')  # Убедитесь, что 'news_home' - это корректное имя URL
+            return redirect('news:news_home')  # Убедитесь, что 'news_home' - это корректное имя URL
         else:
             error = 'Данные были заполнены некорректно'
     else:
